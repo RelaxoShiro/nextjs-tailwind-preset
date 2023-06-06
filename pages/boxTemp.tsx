@@ -1,19 +1,19 @@
 import React from 'react';
 import Image, { StaticImageData } from "next/image"
 
-const BoxTemp = (props: { name: string;
-                          img1: StaticImageData ;
-}) => {
+const BoxTemp = () => {
   return (
-    
-<div className="hover:scale-105 transition-all duration-300 ">
-    <Image src={props.img1} alt={""} className= 'max-w-md  rounded-md border-black border border-dashed hover:animate-pulse'/>
-    <div className='flex justify-between'>
-      <h1 className='text-sm'>{props.name}</h1>
-      <p className='text-gray-400 text-xs'>Branding | Design</p>
-    </div>
-</div>
 
+    <>
+      <div className='w-96 h-48 border-2 border-black'>
+        <div className='w-full h-8 bg-black'>
+          <div className='flex justify-between'>
+            <p className='text-white'>Question</p>
+            <p className='text-white border-2 w-4 h-7'>X</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
