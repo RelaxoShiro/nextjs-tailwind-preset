@@ -10,7 +10,7 @@ const BoxTemp = () => {
           <div className='flex justify-between'>
             <p className='text-white'>Question</p>
             <div className='bg-gray-500 h-8 w-4'>
-
+              wadad
             </div>
           </div>
         </div>
