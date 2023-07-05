@@ -85,7 +85,7 @@ const CollectionPage = ({ collectionName, dynamicPart }: any) => {
                             </thead>
                             <tbody className=''>
                                 {collectionData.map((item: any) => (
-                                    <tr key={item.id} className="text-center w hover:bg-purple-500 ">
+                                    <tr key={item.id} className="text-center hover:bg-purple-500 ">
                                         <td className='p-4 '>{item.asset_name}</td>
                                         <td className='p-4'>{item.categoryID}</td>
                                         <td className='p-4'>{item.purchase_price} $</td>
