@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 const Navbar = () => {
 
     return (
-        <div className="navbar bg-purple-800">
+        <div className="navbar sticky top-0 z-50 bg-purple-800">
             <div className="flex-1">
                 <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
             </div>

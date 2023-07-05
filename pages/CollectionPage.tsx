@@ -1,6 +1,8 @@
 import { addItem, getLatestInvestment } from "@/services/pocketbase";
 import router, { withRouter } from "next/router";
 import { useEffect, useState } from 'react';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 const CollectionPage = ({ collectionName, dynamicPart }: any) => {
     const [collectionData, setCollectionData] = useState([]);
@@ -24,7 +26,10 @@ const CollectionPage = ({ collectionName, dynamicPart }: any) => {
             console.error('Error adding item:', error);
         }
     };
-
+    const options = [
+        'one', 'two', 'three'
+    ];
+    const defaultOption = options[0];
     useEffect(() => {
         const fetchData = async () => {
             console.log(dynamicPart)
@@ -76,14 +81,14 @@ const CollectionPage = ({ collectionName, dynamicPart }: any) => {
                                     <th>Price</th>
                                     <th>Date</th>
                                     {/* Add more table headers */}
-                                </tr>
+                                </tr> Zimmer20012818
                             </thead>
                             <tbody className=''>
                                 {collectionData.map((item: any) => (
                                     <tr key={item.id} className="text-center hover:bg-purple-500 ">
                                         <td className='p-4 '>{item.asset_name}</td>
                                         <td className='p-4'>{item.categoryID}</td>
-                                        <td className='p-4'>{item.purchase_price}</td>
+                                        <td className='p-4'>{item.purchase_price} $</td>
                                         <td className='p-4'>{item.purchase_date}</td>
                                         {/* Add more table cells for additional columns */}
                                     </tr>
@@ -117,9 +122,9 @@ const CollectionPage = ({ collectionName, dynamicPart }: any) => {
 
 
 
-            <dialog id="my_modal_2" className="modal">
-                <form method="dialog" className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
+            <dialog id="my_modal_2" className="modal ">
+                <form method="dialog" className="modal-box bg-cardBG ">
+                    <h3 className="font-bold text-lg">Add new Item</h3>
                     <p className="py-4">Press ESC key or click outside to close</p>
                     <input
                         type="text"
@@ -135,14 +140,8 @@ const CollectionPage = ({ collectionName, dynamicPart }: any) => {
                         value={input2}
                         onChange={(e) => setInput2(e.target.value)}
                     />
-                    <input
-                        type="text"
-                        placeholder="Type here"
-                        className="input input-ghost w-full max-w-xs"
-                        value={input3}
-                        onChange={(e) => setInput3(e.target.value)}
-                    />
-                    <button onClick={handleAddItem}>end</button>
+
+                    <button className="   " onClick={handleAddItem}>Add Item</button>
                 </form>
                 <form method="dialog" className="modal-backdrop">
                     <button>close</button>

@@ -24,18 +24,40 @@ const Dashboard: React.FC<MyComponentProps> = () => {
 
     return (
 
-        <div className="flex justify-center gap-2">
-            <div className="grid grid-cols-2 gap-2 max-h-96">
+        <div className="flex justify-center gap-4">
+            <div className="grid grid-cols-2 gap-4 max-h-96">
                 {categorySummaries.map((categorySummary) => (
                     <CategorySummaryCard key={1} category={categorySummary} />
                 ))}
             </div>
             {/* Refactor Later into own component */}
             <div className='flex flex-col gap-3'>
-                <div className='w-[550px] h-[395px] bg-cardBG rounded-xl hover:scale-105 transition-all '></div>
-                <div className='flex gap-4'>
-                    <div className='w-[265px] h-[140px] bg-cardBG rounded-xl hover:scale-105 transition-all '></div>
-                    <div className='w-[265px] h-[140px] bg-cardBG rounded-xl hover:scale-105 transition-all '></div>
+                <div className='w-[550px] h-[370px] bg-cardBG rounded-xl hover:scale-105 transition-all '></div>
+                <div className='flex gap-4 w-[550px]'>
+                    <div className="stats shadow text-center">
+
+                        <div className="stat w-[183px] bg-cardBG">
+
+                            <div className="stat-title">Downloads</div>
+                            <div className="stat-value">31K</div>
+                            <div className="stat-desc">Jan 1st - Feb 1st</div>
+                        </div>
+
+                        <div className="stat w-[183px] bg-cardBG">
+
+                            <div className="stat-title">New Users</div>
+                            <div className="stat-value">4,200</div>
+                            <div className="stat-desc">↗︎ 400 (22%)</div>
+                        </div>
+
+                        <div className="stat w-[183px] bg-cardBG">
+
+                            <div className="stat-title">New Registers</div>
+                            <div className="stat-value">1,200</div>
+                            <div className="stat-desc">↘︎ 90 (14%)</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             {/* Rest of your code */}

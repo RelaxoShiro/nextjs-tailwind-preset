@@ -1,6 +1,7 @@
 import { addItem, getLatestInvestment } from "@/services/pocketbase";
 import router from "next/router";
 import { useEffect, useState } from 'react';
+import Dropdown from 'react-dropdown';
 
 const AddNewItem: any = ({ onTableUpdate }: any) => {
   function test() {
@@ -16,17 +17,20 @@ const AddNewItem: any = ({ onTableUpdate }: any) => {
         console.error('Error adding item:', error);
       });
   }
-
+  const options = [
+    'one', 'two', 'three'
+  ];
+  const defaultOption = options[0];
   return (
     <>
       <button className="btn" onClick={() => window.my_modal_2.showModal()}>open modal</button>
-      <dialog id="my_modal_2" className="modal">
-        <form method="dialog" className="modal-box">
+      <dialog id="my_modal_2" className="  bg-cardBG">
+        <form method="dialog" className="  bg-cardBG">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Press ESC key or click outside to close</p>
           <input type="text" placeholder="Type here" className="input input-ghost w-full max-w-xs" />
           <input type="text" placeholder="Type here" className="input input-ghost w-full max-w-xs" />
-          <input type="text" placeholder="Type here" className="input input-ghost w-full max-w-xs" />
+
           <button onClick={test}>end</button>
         </form>
         <form method="dialog" className="modal-backdrop">
