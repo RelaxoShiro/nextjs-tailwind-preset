@@ -18,8 +18,7 @@ const AddNewItem: any = ({ onTableUpdate }: any) => {
   }
 
   return (
-    <>
-      <button className="btn" onClick={() => window.my_modal_2.showModal()}>open modal</button>
+    <> 
       <dialog id="my_modal_2" className="modal">
         <form method="dialog" className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>

@@ -1,4 +1,4 @@
-const { url } = require('inspector');
+const { url } = require("inspector");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,14 +13,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cardBG: '#1B1B1B',
-        bgmain: '#272727'
+        cardBG: "#1B1B1B",
+        bgmain: "#272727",
       },
       fontFamily: {
-        "Lexend": ["Lexend", "sans-serif"],
+        Lexend: ["Lexend", "sans-serif"],
       },
-    }
-
+    },
   },
   plugins: [require("daisyui")],
-}
+};

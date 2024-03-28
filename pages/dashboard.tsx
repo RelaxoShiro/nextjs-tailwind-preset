@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next';
 import CategorySummaryCard from "components/CategorySummaryCard"
-import { Category, CategorySummary } from '../types.js';
-import { getCardinfo, getLatestInvestment } from '@/services/pocketbase';
+import { Category, CategorySummary } from '../types.js'; 
 import { useState, useEffect } from 'react';
 
 
@@ -12,15 +11,7 @@ interface MyComponentProps {
 const Dashboard: React.FC<MyComponentProps> = () => {
     const [categorySummaries, setCategorySummaries] = useState<Category[]>([]);
 
-    useEffect(() => {
-        getCardinfo()
-            .then((response) => {
-                setCategorySummaries(response); // Set the resolved array of category summaries
-            })
-            .catch((error) => {
-                console.error('Error retrieving category records:', error);
-            });
-    }, []);
+   
 
     return (
 
